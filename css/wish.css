@@ -1,0 +1,394 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    height: 100vh;
+    background: black;
+    /* background:linear-gradient(210deg, rgb(40, 0, 45), rgb(45, 0, 32)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main
+{
+    width: 34%;
+    height: 40vh;
+    border-radius: 0.6em;
+    border: 2px groove rgba(128, 128, 128, 0.05);
+    border-right-color: rgba(255, 255, 255, 0.15);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(145deg,rgba(0, 0, 0, 0.2), rgba(131, 131, 131, 0.2)); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    z-index: 100;
+}
+@font-face 
+{
+    src: url(../assests/fonts/CinzelDecorative-Regular.ttf);
+    font-family: CinzelDecorative;
+}
+.main h1
+{
+    color: white;
+    font-size: 40px;
+    font-weight: lighter;
+    font-style: normal;
+    font-family: CinzelDecorative;
+    /* text-transform: uppercase; */
+}
+.infoContainer
+{
+    width: 80%;
+    height: 20vh;
+    border-radius: 0.5em;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.infoContainer section
+{
+    margin-bottom: 5px;
+}
+.infoContainer span
+{
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+}
+@font-face 
+{
+    src: url(../assests/fonts/MateSC-Regular.ttf);
+    font-family: MateSC;
+}
+.infoContainer .userName
+{
+    font-size: 24px;
+    font-style: normal;
+    font-family: MateSC;
+}
+.infoContainer #mm, #dy, #yy
+{
+    font-size:20px;
+    text-transform: lowercase;
+}
+.main button
+{
+    width: 25%;
+    height: 5vh;
+    color: black;
+    font-size: small;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+    cursor: pointer;
+}
+.main button:active
+{
+    background: white;
+}
+#love1
+{
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    bottom: 18vh;
+    right: 26vw;
+    z-index: 1;
+    animation: animate1 3s linear infinite;
+}
+#love2
+{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top: 22vh;
+    left: 29vw;
+    transform: rotateZ(-45deg);
+    z-index: 1;
+    animation: animate1 2s linear infinite;
+}
+#love3
+{
+    width: 60px;
+    height: 60px;
+    position:absolute;
+    top: 25vh;
+    right: 31vw;
+    transform: rotateZ(35deg);
+    z-index: 1;
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        transform: scale(1.5);
+    }
+    50%
+    {
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(1.5);
+    } 
+}
+.cardContainer
+{
+    width: 60%;
+    height: 70vh;
+    border-radius: 0.6em;
+    background: rgb(22, 22, 22);
+    position:absolute;
+    z-index: 101;
+    display: none;
+}
+.cardContainer #close
+{
+    width: 2%;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+.cardContainer h1
+{
+    color:black;
+    text-transform: uppercase;
+    position:absolute;
+    left: 21%;
+    top: 45%;
+}
+.card
+{
+    width: 60%;
+    height: 50vh;
+    position:absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+.card:hover
+{
+    transform: rotate(-5deg);
+}
+.card:hover .outside
+{
+    transform: rotateY(-130deg);
+}
+.outside, .innside
+{
+    width: 50%;
+    height: 100%;
+    position:absolute;
+    left: 50%;
+}
+.innside
+{
+    left: 50%;
+    border-radius: 0em, 0.5em, 0.5em, 0em;
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(172, 0, 120));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.innside img
+{
+    width: 80%;
+}
+@font-face 
+{
+    src: url(../assests/fonts/IBMPlexMono-Regular.ttf);
+    font-family: IBMPlexMono;
+}
+.innside p
+{
+    width: 80%;
+    font-size: 14px;
+    font-family: IBMPlexMono;
+}
+.innside p:nth-child(3)
+{
+    width: 80%;
+    font-size: 14px;
+    font-family: IBMPlexMono;
+    text-align: justify;
+}
+.outside
+{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 120;
+    transform-origin: left;
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+    transition: 2s;
+}
+.front, .back
+{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0);
+}
+
+.front
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+}
+@font-face 
+{
+    src: url(../assests/fonts/LavishlyYours-Regular.ttf);
+    font-family: LavishlyYours;
+}
+.front p
+{
+    color:rgb(35, 0, 40);
+    font-weight: bolder;
+}
+.front p:nth-child(1), p:nth-child(3)
+{
+    font-size: 24px;
+    font-family: MateSC;
+}
+.front p:nth-child(2)
+{
+    font-size: 74px;
+    margin-top: -6vh;
+    margin-bottom: -4vh;
+    font-family: LavishlyYours;
+}
+.front p:nth-child(4)
+{
+    font-size: 16px;
+    font-family: MateSC;
+    margin-top: 5vh;
+}
+.front p:nth-child(5)
+{
+    font-size: 40px;
+    font-family: LavishlyYours;
+    text-transform:capitalize;
+    margin-top: -2vh;
+}
+.back
+{
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+}
+.back img
+{
+    width: 80%;
+    height: 80%;
+    margin-top: -50vh;
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.3));
+    border-radius: 0.5em;
+}
+@media screen and (max-width: 750px) 
+{
+    .main
+    {
+        width: 90%;
+        height: 35vh;
+    }
+    .infoContainer
+    {
+        width: 90%;
+        height: 15vh;
+    }
+    .main button
+    {
+        width: 35%;
+    }
+    #love1
+    {
+        width:100px;
+        height:100px;
+        left: 1.5vw;
+        bottom: 25vh;
+    }
+    #love2
+    {
+        width:60px;
+        height:60px;
+        top: 26vh;
+        left: 70vw;
+    }
+    #love3
+    {
+        width:30px;
+        height:30px;
+        top: 30vh;
+        right: 5vw;
+    }
+    .cardContainer
+    {
+        width: 95%;
+        height: 45vh;
+    }
+    .cardContainer #close
+    {
+        width: 4%;
+    }
+    .card
+    {
+        width: 90%;
+        height: 30vh;
+    }
+    .front p:nth-child(2)
+    {
+        font-size: 50px;
+        margin-top: -4vh;
+        margin-bottom: -3vh;
+    }
+    .front p:nth-child(1), p:nth-child(3)
+    {
+        font-size: 18px;
+    }
+    .front p:nth-child(5)
+    {
+        font-size: 30px;
+        margin-top: -1vh;
+    }
+    .back img
+    {
+        margin-top: -30vh;
+    }
+    .cardContainer h1
+    {
+        font-size: 20px;
+        left: 10%;
+    }
+    .innside p
+    {
+        font-size: 10px;
+    }
+    .innside p:nth-child(3)
+    {
+        font-size: 10px;
+    }
+}

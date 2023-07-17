@@ -1,0 +1,225 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:black;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+.baloons
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+    position: absolute;
+    z-index: 3;
+    transition: 2s;
+}
+#baloon1
+{
+    top: 10vh;
+    left: 24vw;
+}
+#baloon2
+{
+    top: 24vh;
+    right: 30vw;
+}
+#baloon3
+{
+    bottom: 1vh;
+    right: 24vw;
+}
+div
+{
+    width: 34%;
+    height: 40vh;
+    border-radius: 0.6em;
+    border: 2px groove rgba(128, 128, 128, 0.05);
+    border-right-color: rgba(255, 255, 255, 0.15);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(145deg,rgba(0, 0, 0, 0.2), rgba(131, 131, 131, 0.2)); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    z-index: 100;
+}
+
+form
+{
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+}
+@font-face 
+{
+    src: url(../assests/fonts/MonsieurLaDoulaise-Regular.ttf);
+    font-family: MonsieurLaDoulaise;
+}
+form>h1
+{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: MonsieurLaDoulaise;
+    font-weight: lighter;
+}
+section
+{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+section input
+{
+    width: 40%;
+    height: 5vh;
+    color:white;
+    font-family:arial;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border: none;
+    outline: none;
+    border-radius: 2em;
+    text-align: center;
+    background:rgba(211, 211, 211, 0.1);
+}
+section input:focus
+{
+    color:black;
+    font-weight: lighter;
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+}
+section #firstName
+{
+    width: 48%;
+    border-radius: 2em 0em 0em 2em;
+}
+section #surName
+{
+    width: 48%;
+    border-radius: 0em 2em 2em 0em;
+}
+section select
+{
+    color:rgb(109, 109, 109);
+    width: 32%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 0.2em;
+    background:rgba(211, 211, 211, 0.1);
+}
+section select:valid
+{
+    color: white;
+}
+section select:focus
+{
+    color:black;
+    font-weight: lighter;
+    /* color:rgb(255, 0, 179); */
+    /* border: 2px groove rgb(255, 0, 179); */
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+}
+section #dy
+{
+    border-radius: 2em 0em 0em 2em;
+}
+section #yy
+{
+    border-radius: 0em 2em 2em 0em;
+}
+#submit
+{
+    width: 30%;
+    height: 5vh;
+    color: black;
+    font-weight: bolder;
+    background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
+    cursor: pointer;
+}
+#submit:active
+{
+    box-shadow: none;
+    background: white;
+}
+@media screen and (max-width: 1050px) 
+{
+    div
+    {
+        width: 90%;
+        height: 35vh;
+    }
+    form
+    {
+        width: 90%;
+        height: 35vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        flex-direction: column;
+    }
+    .names
+    {
+        height: 9.5vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .names #firstName
+    {
+        width: 100%;
+        border-radius: 2em;
+    }
+    .names #surName
+    {
+        width: 100%;
+        border-radius: 2em;
+    }
+    #baloon1
+    {
+        top: 10vh;
+        left: -25vw;
+    }
+    #baloon2
+    {
+        top: 24vh;
+        right: 5vw;
+    }
+    #baloon3
+    {
+        right: -0vw;
+        border-radius: 0%;
+        clip-path: circle(50% at 90% 50%);
+    }
+    section input
+    {
+        height: 4vh;
+    }
+    section select
+    {
+        height: 4vh;
+    }
+    #submit
+    {
+        width: 40%;
+        height: 5vh;
+    }
+}
