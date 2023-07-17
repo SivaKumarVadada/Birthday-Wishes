@@ -100,7 +100,7 @@ section input
 section input:focus
 {
     color:black;
-    font-weight: lighter;
+    font-weight: bold;
     background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
 }
 section #firstName
