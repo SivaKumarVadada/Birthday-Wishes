@@ -122,7 +122,7 @@ section select
     outline: none;
     text-align: center;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: bold;
     letter-spacing: 0.2em;
     background:rgba(211, 211, 211, 0.1);
 }
@@ -133,9 +133,6 @@ section select:valid
 section select:focus
 {
     color:black;
-    font-weight: lighter;
-    /* color:rgb(255, 0, 179); */
-    /* border: 2px groove rgb(255, 0, 179); */
     background:linear-gradient(210deg, rgb(229, 33, 255), rgb(255, 0, 179));
 }
 section #dy
